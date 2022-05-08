@@ -11,6 +11,7 @@ spec:
         kind: HelmRepository
         name: mmontes
         namespace: flux-system
+      version: "0.3.0"
   interval: 5m
   values:
     image:
@@ -34,19 +35,3 @@ spec:
 
     nodeSelector:
       node.mmontes.io/type: compute
-
-    prometheus-redis-exporter:
-      image:
-        repository: oliver006/redis_exporter
-        tag: v1.37.0
-        pullPolicy: IfNotPresent
-      service:
-        type: ClusterIP
-        port: 9121
-      redisAddress: redis://redis:6379
-      serviceMonitor:
-        enabled: true
-        interval: 30s
-        timeout: 10s
-        labels:
-      release: kube-prometheus-stack
