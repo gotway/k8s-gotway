@@ -15,8 +15,7 @@ service:
   spec:
     externalTrafficPolicy: Local
 
-secretRef:
-  name: gotway
+redisUrl: &redisUrl "redis://redis:6379/11"
 
 tlsEnabled: true
 
@@ -95,6 +94,7 @@ examples:
 
   stock:
     image:
+      url: *redisUrl
       repository: gotwaygateway/stock
       pullPolicy: IfNotPresent
       tag: "v0.0.4"

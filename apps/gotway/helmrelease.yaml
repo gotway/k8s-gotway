@@ -10,7 +10,7 @@ spec:
         kind: HelmRepository
         name: gotway
         namespace: flux-system
-      version: "0.5.0"
+      version: "0.6.0"
   interval: 1h0m0s
   valuesFrom:
     - kind: ConfigMap
