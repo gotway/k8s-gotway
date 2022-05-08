@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: gotway
+spec:
+  chart:
+    spec:
+      chart: gotway
+      sourceRef:
+        kind: HelmRepository
+        name: gotway
+        namespace: flux-system
+      version: "0.1.0"
+  interval: 1h0m0s
+  valuesFrom:
+    - kind: ConfigMap
+      name: gotway
