@@ -8,8 +8,7 @@ spec:
       chart: gotway
       sourceRef:
         kind: HelmRepository
-        name: mmontes
-        namespace: flux-system
+        name: gotway
       version: "0.7.0"
   interval: 1h0m0s
   valuesFrom:

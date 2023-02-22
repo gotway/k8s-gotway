@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: gotway
 resources:
   - helmrelease.yaml
+  - helmrepository.yaml
 configMapGenerator:
   - name: gotway
     files:
