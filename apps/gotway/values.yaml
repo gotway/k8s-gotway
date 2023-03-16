@@ -3,7 +3,7 @@ env: production
 logLevel: info
 
 image:
-  repository: gotwaygateway/gotway
+  repository: ghcr.io/gotway/gotway
   pullPolicy: IfNotPresent
 
 service:
@@ -72,7 +72,7 @@ examples:
 
   catalog:
     image:
-      repository: gotwaygateway/catalog
+      repository: ghcr.io/gotway/catalog
       pullPolicy: IfNotPresent
       tag: "v0.0.4"
 
@@ -101,7 +101,7 @@ examples:
   stock:
     image:
       url: *redisUrl
-      repository: gotwaygateway/stock
+      repository: ghcr.io/gotway/stock
       pullPolicy: IfNotPresent
       tag: "v0.0.4"
 
@@ -144,7 +144,7 @@ examples:
     enabled: false
 
     image:
-      repository: gotwaygateway/traffic
+      repository: ghcr.io/gotway/traffic
       pullPolicy: IfNotPresent
       tag: "v0.0.1"
 
