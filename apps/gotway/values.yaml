@@ -8,9 +8,9 @@ image:
 
 service:
   type: LoadBalancer
-  port: 443
+  port: 9111
   annotations:
-    metallb.universe.tf/loadBalancerIPs: 192.168.0.91
+    metallb.universe.tf/loadBalancerIPs: 10.0.0.90
   spec:
     externalTrafficPolicy: Local
 
@@ -40,8 +40,6 @@ monitoring:
   path: /metrics
   port: 2112
   interval: 10s
-  labels:
-    release: kube-prometheus-stack
 
 pprof:
   enabled: false
